@@ -172,7 +172,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2022-01-12 16:50:01 / Modified: 20:32:49" itemprop="dateCreated datePublished" datetime="2022-01-12T16:50:01+08:00">2022-01-12</time>
+              <time title="Created: 2022-01-12 16:50:01 / Modified: 21:12:17" itemprop="dateCreated datePublished" datetime="2022-01-12T16:50:01+08:00">2022-01-12</time>
             </span>
 
           
@@ -187,41 +187,14 @@
 
       
           <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>其實就是一時心血來潮想要搭個blog，有事沒的時候可以打打字、寫寫東西，以前也曾經嘗試過Notion、Hackmd等支援markdown格式的文本工具，但一直都沒有認真使用，又或者是因為一直都沒有選擇對外公開，最後都淪為記事本的用途，著實有點可惜。所以藉著這次機會搭建一個自己公開的頁面，試看看有沒有起到督促自己寫下文字的作用。</p>
-<h3 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h3><p>確認 <code>node.js</code> &amp; <code>npm</code> 已確實安裝於工作台</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-<p>查看成功安裝與否。</p>
-<h3 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h3><p>使用 <code>npm install</code> 指令安裝 <a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/">Hexo Command Line Interface</a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-<p>使用 <code>hexo cli</code> 提供指令初始化 blog 並安裝下載 packages &amp; dependencies</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<p>順道安裝部屬插件 <code>hexo-deployer-git</code>  方便之後發布至 github page</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git –save</span><br></pre></td></tr></table></figure>
-<h3 id="Step-3"><a href="#Step-3" class="headerlink" title="Step 3"></a>Step 3</h3><p>接著就可以使用 <code>hexo server</code> 指令運行hexo於本地端 (default port:4000) 預覽</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<h2 id="準備-Github-Page"><a href="#準備-Github-Page" class="headerlink" title="準備 Github Page"></a>準備 Github Page</h2><h3 id="Step-1-1"><a href="#Step-1-1" class="headerlink" title="Step 1"></a>Step 1</h3><p>新增一個名為 <code>[username].github.io</code> 的 repositoty<br><img src="/images/new-repo.png"></p>
-<p>設置成功之後即可透過 <code>https://[username].github.io</code> 來瀏覽你的 github 頁面。</p>
-<h2 id="將-Hexo-發布至-Github-Page"><a href="#將-Hexo-發布至-Github-Page" class="headerlink" title="將 Hexo 發布至 Github Page"></a>將 Hexo 發布至 Github Page</h2><h3 id="Step-1-2"><a href="#Step-1-2" class="headerlink" title="Step 1"></a>Step 1</h3><p>於本地設置 <code>_config.yml</code>，找到 <code># URL</code> 的區塊</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: https://kermit1013.github.io/</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-<p>並將 url 的參數設定為 <code>https://[username].github.io</code></p>
-<h3 id="Step-2-1"><a href="#Step-2-1" class="headerlink" title="Step 2"></a>Step 2</h3><p>接著於同個檔案底部找到 <code># Deployment</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:kermit1013/kermit1013.github.io</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
-<p>並將 repo 的參數設定為 <code> git@github.com:[username]/[username].github.io</code></p>
-<p>以及branch 設為 <code>main</code>  (2020/10 起，所有新建的儲存庫都會以<code>main</code>為預設branch命名，不再使用<code>master</code>)</p>
-<h3 id="Step-3-1"><a href="#Step-3-1" class="headerlink" title="Step 3"></a>Step 3</h3><p>執行部屬之前，為了確保沒有一些奇怪的問題通常會先執行<code>clean</code>清除快取、<code>generate</code>生成靜態檔案、最後才是<code>deploy</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp; hexo g &amp; hexo d</span><br></pre></td></tr></table></figure>
-
-<h2 id="Issues"><a href="#Issues" class="headerlink" title="Issues"></a>Issues</h2><p>發布階段卡在這個屎坑好一段時間，網路上不知道哪篇資源把 <code>:</code> 誤植成 <code>/</code> ，差點沒被搞瘋。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">repo: git@github.com/[username]/[username].github.io </span><br></pre></td></tr></table></figure>
-<p>導致部屬的時候一直出現 <code>Error: Spawn failed</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">FATAL &#123;</span><br><span class="line">  err: Error: Spawn failed</span><br><span class="line">      at ChildProcess.&lt;anonymous&gt; (/.../node_modules/hexo-util/lib/spawn.js:51:21)</span><br><span class="line">      at ChildProcess.emit (events.js:376:20)</span><br><span class="line">      at Process.ChildProcess._handle.onexit (internal/child_process.js:277:12) &#123;</span><br><span class="line">    code: 128</span><br><span class="line">  &#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<p>明天想來寫寫文化腳本。</p>
-</blockquote>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/01/12/github-page-hexo/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
