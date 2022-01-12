@@ -20,30 +20,34 @@
     var CONFIG = {"hostname":"kermit1013.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="好奇心使然，隨手寫點衝浪、日常、技術">
-<meta property="og:type" content="website">
-<meta property="og:title" content="想到就寫">
-<meta property="og:url" content="https://kermit1013.github.io/index.html">
+  <meta name="description" content="前言其實就是一時心血來潮想要搭個blog，有事沒的時候可以打打字、寫寫東西，以前也曾經嘗試過Notion、Hackmd等支援markdown格式的文本工具，但一直都沒有認真使用，又或者是因為一直都沒有選擇對外公開，最後都淪為記事本的用途，著實有點可惜。所以藉著這次機會搭建一個自己公開的頁面，試看看有沒有起到督促自己寫下文字的作用。 Step 1確認 node.js &amp; npm 已確實安裝於">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建 Hexo 於 Github page">
+<meta property="og:url" content="https://kermit1013.github.io/2022/01/12/github-page-hexo/index.html">
 <meta property="og:site_name" content="想到就寫">
-<meta property="og:description" content="好奇心使然，隨手寫點衝浪、日常、技術">
+<meta property="og:description" content="前言其實就是一時心血來潮想要搭個blog，有事沒的時候可以打打字、寫寫東西，以前也曾經嘗試過Notion、Hackmd等支援markdown格式的文本工具，但一直都沒有認真使用，又或者是因為一直都沒有選擇對外公開，最後都淪為記事本的用途，著實有點可惜。所以藉著這次機會搭建一個自己公開的頁面，試看看有沒有起到督促自己寫下文字的作用。 Step 1確認 node.js &amp; npm 已確實安裝於">
 <meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://kermit1013.github.io/images/new-repo.png">
+<meta property="article:published_time" content="2022-01-12T08:50:01.000Z">
+<meta property="article:modified_time" content="2022-01-12T12:32:49.555Z">
 <meta property="article:author" content="Kermit">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kermit1013.github.io/images/new-repo.png">
 
-<link rel="canonical" href="https://kermit1013.github.io/">
+<link rel="canonical" href="https://kermit1013.github.io/2022/01/12/github-page-hexo/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-tw'
   };
 </script>
 
-  <title>想到就寫</title>
+  <title>搭建 Hexo 於 Github page | 想到就寫</title>
   
 
 
@@ -141,9 +145,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
@@ -159,10 +164,9 @@
       <meta itemprop="name" content="想到就寫">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/01/12/github-page-hexo/" class="post-title-link" itemprop="url">搭建 Hexo 於 Github page</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          搭建 Hexo 於 Github page
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -186,7 +190,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>其實就是一時心血來潮想要搭個blog，有事沒的時候可以打打字、寫寫東西，以前也曾經嘗試過Notion、Hackmd等支援markdown格式的文本工具，但一直都沒有認真使用，又或者是因為一直都沒有選擇對外公開，最後都淪為記事本的用途，著實有點可惜。所以藉著這次機會搭建一個自己公開的頁面，試看看有沒有起到督促自己寫下文字的作用。</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>其實就是一時心血來潮想要搭個blog，有事沒的時候可以打打字、寫寫東西，以前也曾經嘗試過Notion、Hackmd等支援markdown格式的文本工具，但一直都沒有認真使用，又或者是因為一直都沒有選擇對外公開，最後都淪為記事本的用途，著實有點可惜。所以藉著這次機會搭建一個自己公開的頁面，試看看有沒有起到督促自己寫下文字的作用。</p>
 <h3 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h3><p>確認 <code>node.js</code> &amp; <code>npm</code> 已確實安裝於工作台</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
 <p>查看成功安裝與否。</p>
@@ -222,89 +226,30 @@
 <p>明天想來寫寫文化腳本。</p>
 </blockquote>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
-    <link itemprop="mainEntityOfPage" href="https://kermit1013.github.io/2022/01/11/sudden-thought/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/kermit512.jpg">
-      <meta itemprop="name" content="Kermit">
-      <meta itemprop="description" content="好奇心使然，隨手寫點衝浪、日常、技術">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="想到就寫">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/01/11/sudden-thought/" class="post-title-link" itemprop="url">想到就寫</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-01-11 15:37:01" itemprop="dateCreated datePublished" datetime="2022-01-11T15:37:01+08:00">2022-01-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-01-12 00:00:34" itemprop="dateModified" datetime="2022-01-12T00:00:34+08:00">2022-01-12</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>2021新年新希望，利用空窗的這段期間，盡量紀錄下來突如其來的想法，希望可以養成一天產出一篇的習慣，可能紀錄些衝浪相關，可能紀錄各種讀後心得，可能反思當天種種感受，也不排斥產出技術相關文章，總之就是訓練自己以最簡陋的載體，表達感受，紀錄生活點滴。</p>
-<blockquote>
-<p>明天就來紀錄搭建 github page &amp; hexo 路上遇到的屎坑吧。</p>
-</blockquote>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/01/11/sudden-thought/" rel="prev" title="想到就寫">
+      <i class="fa fa-chevron-left"></i> 想到就寫
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -357,6 +302,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-1"><span class="nav-number">1.1.</span> <span class="nav-text">Step 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-2"><span class="nav-number">1.2.</span> <span class="nav-text">Step 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-3"><span class="nav-number">1.3.</span> <span class="nav-text">Step 3</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BA%96%E5%82%99-Github-Page"><span class="nav-number">2.</span> <span class="nav-text">準備 Github Page</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-1-1"><span class="nav-number">2.1.</span> <span class="nav-text">Step 1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%87-Hexo-%E7%99%BC%E5%B8%83%E8%87%B3-Github-Page"><span class="nav-number">3.</span> <span class="nav-text">將 Hexo 發布至 Github Page</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-1-2"><span class="nav-number">3.1.</span> <span class="nav-text">Step 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-2-1"><span class="nav-number">3.2.</span> <span class="nav-text">Step 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-3-1"><span class="nav-number">3.3.</span> <span class="nav-text">Step 3</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Issues"><span class="nav-number">4.</span> <span class="nav-text">Issues</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
